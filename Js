@@ -1,0 +1,13 @@
+let xp = 0;
+let level = 1;
+
+document.getElementById("increase-xp").onclick = function() {
+    xp += 10;
+    if (xp >= 100) {
+        xp = 0;
+        level++;
+    }
+
+    document.getElementById("xp").textContent = xp;
+    document.getElementById("level").textContent = level;
+};
